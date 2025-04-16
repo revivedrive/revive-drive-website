@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Revive & Drive</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Revive & Drive Automotive Repair</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Email:</strong> info@reviveanddrive.com</p>
+      <p><strong>Address:</strong> 1234 Auto Lane, Mechanicville, USA</p>
+      <p><strong>Hours:</strong> Mon–Fri: 8AM–6PM</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
+  </footer>
+</body>
+</html>
