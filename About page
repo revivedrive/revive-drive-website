@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Revive & Drive</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Revive & Drive Automotive Repair</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>About Us</h2>
+      <p>At Revive & Drive, we're more than just a repair shop — we're your neighbors. Our mission is to get you back on the road safely and efficiently with honest service and fair prices.</p>
+      <p>We’re proud to be locally owned and operated, serving our community with care and respect.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
+  </footer>
+</body>
+</html>
