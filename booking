@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book an Appointment | Revive & Drive</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Revive & Drive Automotive Repair</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Book an Appointment</h2>
+      <p>Click below to schedule your service online:</p>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=35476034" target="_blank" style="color: #1e3a8a; font-weight: bold;">Book with Acuity Scheduling</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
+  </footer>
+</body>
+</html>
