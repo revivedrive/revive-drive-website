@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive & Drive Automotive Repair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Revive & Drive Automotive Repair</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Welcome to Revive & Drive</h2>
+      <p>Your trusted partner for reliable, professional automotive repair. Whether you're in for routine maintenance or major repairs, we're here to get you back on the road safely and smoothly.</p>
+      <a class="cta-button" href="booking.html">Book an Appointment</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
+  </footer>
+</body>
+</html>
