@@ -5,99 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Revive & Drive</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f0f8ff; /* light blue background */
-      color: #333;
-      <link rel="preload" href="images/IMG_0152.jpg" as="image">
-<link rel="preload" href="images/IMG_0160.jpg" as="image">
-<link rel="preload" href="images/IMG_0180.jpg" as="image">
-    }
 
-    .services-container {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .slideshow-container {
-      max-width: 600px;
-      position: relative;
-      margin: auto;
-    }
-
-    .slides {
-      display: none;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-      from { opacity: 0.4 }
-      to { opacity: 1 }
-    }
-
-    @media (max-width: 600px) {
-      .slides {
-        width: 100%;
-      }
-    }
-  </style>
+  <!-- Preload slideshow images -->
+  <link rel="preload" href="images/IMG_0152.jpg" as="image" />
+  <link rel="preload" href="images/IMG_0160.jpg" as="image" />
+  <link rel="preload" href="images/IMG_0180.jpg" as="image" />
 </head>
 <body>
 
-  <div class="services-container">
-    <h1>Our Services</h1>
-    <p>From repairs to upgrades, we’ve got your ride covered. Here's some of our work:</p>
+  <header>
+    <h1>Revive & Drive Automotive Repair</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container services-container">
+    <h2>Our Services</h2>
+    <p>We offer a wide range of automotive repair and upgrade services including:</p>
+    <ul>
+      <li>Brake Repairs</li>
+      <li>Check Engine Diagnostics</li>
+      <li>Suspension Upgrades</li>
+      <li>Custom Modifications</li>
+      <li>Routine Maintenance</li>
+    </ul>
 
     <div class="slideshow-container">
-      <img class="slides fade" src="images/IMG_0152.jpg" alt="Service 1">
-      <img class="slides fade" src="images/IMG_0160.jpg" alt="Service 2">
-      <img class="slides fade" src="images/IMG_0180.jpg" alt="Service 3">
+      <img src="images/IMG_0152.jpg" class="slides" alt="Service 1" />
+      <img src="images/IMG_0160.jpg" class="slides" alt="Service 2" />
+      <img src="images/IMG_0180.jpg" class="slides" alt="Service 3" />
     </div>
   </div>
 
-<script>
-  const slides = document.getElementsByClassName("slides");
-  let slideIndex = 0;
+  <footer>
+    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
+  </footer>
 
-  function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].classList.remove("active");
-    }
-    slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].classList.add("active");
-  }
-
-  // Wait for all images to fully load before starting slideshow
-  window.addEventListener("load", function () {
-    // Set first image visible
-    if (slides.length > 0) {
-      slides[0].classList.add("active");
-    }
-
-    // Start the slideshow
-    setInterval(showSlides, 3000);
-  });
-</script>
+  <script>
+    const slides = document.getElementsByClassName("slides");
+    let slideIndex = 0;
 
     function showSlides() {
-      const slides = document.getElementsByClassName("slides");
       for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove("active");
       }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change image every 3 seconds
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
     }
+
+    window.addEventListener("load", function () {
+      if (slides.length > 0) {
+        slides[0].classList.add("active");
+      }
+      setInterval(showSlides, 3000);
+    });
   </script>
 
 </body>
