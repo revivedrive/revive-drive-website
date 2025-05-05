@@ -44,32 +44,6 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-.slideshow-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  position: relative;
-  height: auto;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  left: 0;
-  top: 0;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
@@ -77,4 +51,3 @@ footer {
   color: white;
   margin-top: 2rem;
 }
-
