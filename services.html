@@ -61,9 +61,29 @@
     </div>
   </div>
 
-  <script>
-    let slideIndex = 0;
-    showSlides();
+<script>
+  const slides = document.getElementsByClassName("slides");
+  let slideIndex = 0;
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+  }
+
+  // Wait for all images to fully load before starting slideshow
+  window.addEventListener("load", function () {
+    // Set first image visible
+    if (slides.length > 0) {
+      slides[0].classList.add("active");
+    }
+
+    // Start the slideshow
+    setInterval(showSlides, 3000);
+  });
+</script>
 
     function showSlides() {
       const slides = document.getElementsByClassName("slides");
