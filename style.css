@@ -57,6 +57,8 @@ a:hover {
   max-width: 600px;
   position: relative;
   margin: auto;
+  min-height: 400px; /* or match your image height */
+  overflow: hidden;
 }
 
 .slides {
