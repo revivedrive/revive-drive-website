@@ -26,7 +26,62 @@ header {
 header h1 {
   margin-bottom: 10px;
 }
+.service-gallery {
+  background-color: #e9f1fa;
+  padding: 2rem;
+  text-align: center;
+}
 
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #004080;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(0); }
+  34% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  67% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .slides { flex-direction: column; width: 100%; animation: none; }
+  .slides img { width: 100%; }
+  .prev, .next { display: none; }
+}
 nav ul {
   list-style: none;
   display: flex;
