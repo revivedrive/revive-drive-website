@@ -2,53 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Revive & Drive</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Revive & Drive</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f8ff; /* light blue background */
+      color: #333;
+    }
+
+    .services-container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4 }
+      to { opacity: 1 }
+    }
+
+    @media (max-width: 600px) {
+      .slides {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Revive & Drive Automotive Repair</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="booking.html">Book Now</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>Our Services</h2>
-      <ul style="text-align: left; max-width: 600px; margin: auto;">
-        <li> General Auto Repair</li>
-        <li> Timing Belts/ Water Pumps</li> 
-        <li> Oil Changes & Tune-Ups</li>
-        <li> Brake Services</li>
-        <li> Diagnostics & Check Engine Lights</li>
-        <li> Engine & Transmission Work</li>
-        <li> Suspension & Alignment</li>
-        <li> Vehicle Inspections</li>
-        <li> Air Conditioning and Heat Services</li>
-      </ul>
-    </section>
-  </main>
-  <section class="service-gallery">
-  <h2>See Our Work</h2>
-  <div class="slider">
-    <div class="slides">
-      <img src="images/IMG_0152.jpg" alt="Carburetor before and after">
-      <img src="images/IMG_0160.jpg" alt="Brake job">
-      <img src="images/IMG_0180.jpg" alt="Engine repair">
+  <div class="services-container">
+    <h1>Our Services</h1>
+    <p>From repairs to upgrades, we’ve got your ride covered. Here's some of our work:</p>
+
+    <div class="slideshow-container">
+      <img class="slides fade" src="images/IMG_0152.jpg" alt="Service 1">
+      <img class="slides fade" src="images/IMG_0160.jpg" alt="Service 2">
+      <img class="slides fade" src="images/IMG_0180.jpg" alt="Service 3">
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
   </div>
-</section>
 
-  <footer>
-    <p>&copy; 2025 Revive & Drive Automotive Repair</p>
-  </footer>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
 </body>
 </html>
