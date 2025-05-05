@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Revive & Drive</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Preload slideshow images -->
-  <link rel="preload" href="images/IMG_0152.jpg" as="image" />
-  <link rel="preload" href="images/IMG_0160.jpg" as="image" />
-  <link rel="preload" href="images/IMG_0180.jpg" as="image" />
 </head>
 <body>
 
@@ -24,9 +19,9 @@
     </nav>
   </header>
 
-  <div class="container services-container">
+  <main class="services-section">
     <h2>Our Services</h2>
-    <p>We offer a wide range of automotive repair and upgrade services including:</p>
+    <p>We specialize in reliable, affordable auto repair and custom upgrades, including:</p>
     <ul>
       <li>Brake Repairs</li>
       <li>Check Engine Diagnostics</li>
@@ -36,34 +31,33 @@
     </ul>
 
     <div class="slideshow-container">
-      <img src="images/IMG_0152.jpg" class="slides" alt="Service 1" />
-      <img src="images/IMG_0160.jpg" class="slides" alt="Service 2" />
-      <img src="images/IMG_0180.jpg" class="slides" alt="Service 3" />
+      <img class="slide fade" src="images/IMG_0152.jpg" alt="Service 1" />
+      <img class="slide fade" src="images/IMG_0160.jpg" alt="Service 2" />
+      <img class="slide fade" src="images/IMG_0180.jpg" alt="Service 3" />
     </div>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Revive & Drive Automotive Repair</p>
   </footer>
 
   <script>
-    const slides = document.getElementsByClassName("slides");
     let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
 
     function showSlides() {
       for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
+        slides[i].style.opacity = "0";
       }
       slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add("active");
+      slides[slideIndex].style.opacity = "1";
     }
 
-    window.addEventListener("load", function () {
-      if (slides.length > 0) {
-        slides[0].classList.add("active");
-      }
+    // Set initial visibility
+    window.onload = function () {
+      slides[0].style.opacity = "1";
       setInterval(showSlides, 3000);
-    });
+    };
   </script>
 
 </body>
